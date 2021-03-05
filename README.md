@@ -32,8 +32,8 @@ Once we stored the correspondeces between 3D world and 2D image points for the i
 
 I applied this distortion correction to the image 'calibration2.jpg' using the `cv2.undistort()` function and obtained the following result: 
 
-![Chessboard1][./camera_cal/calibration2.jpg]
-![Chessboard2][./output_images/calibration2.jpg]
+![Chessboard1](camera_cal/calibration2.jpg)
+![Chessboard2](output_images/calibration2.jpg)
 
 ### Pipeline (single images)
 
@@ -41,13 +41,13 @@ I applied this distortion correction to the image 'calibration2.jpg' using the `
 
 Once the camera is calibrated, we can use the camera matrix and distortion coefficients we found to undistort also the test images. To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 
-![Undist][./output_images/test2.jpg]
+![Undist](./output_images/test2.jpg)
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`). Here's an example of my output for this step. All the other ways were included in the code though not needed.
 
-![Thresh][./output_images/test1.jpg]
+![Thresh](./output_images/test1.jpg)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -69,13 +69,13 @@ The code for my perspective transform includes a function called `warper()`, whi
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![PersTr][./output_images/warped_straight_lines1.jpg]
+![PersTr](./output_images/warped_straight_lines1.jpg)
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
 Then I set two sliding windows for the left and right lane lines, and fit them with a 2nd order polynomial kinda like this:
 
-![SldWindows][./output_images/pixels_test4.jpg]
+![SldWindows](./output_images/pixels_test4.jpg)
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -87,7 +87,7 @@ During the previous lane-line detection phase, a 2nd order polynomial is fitted 
 
 I implemented all the front steps by build the pipeline function `process_image`.  Here is an example of my result on a test image:
 
-![Output][./output_images/output_test4.jpg]
+![Output](./output_images/output_test4.jpg)
 
 ---
 
