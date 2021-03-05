@@ -32,8 +32,8 @@ Once we stored the correspondeces between 3D world and 2D image points for the i
 
 I applied this distortion correction to the image 'calibration2.jpg' using the `cv2.undistort()` function and obtained the following result: 
 
-![Chessboard1](camera_cal/calibration2.jpg)
-![Chessboard2](output_images/calibration2.jpg)
+![Chessboard1](./camera_cal/calibration2.jpg)
+![Chessboard2](./output_images/calibration2.jpg)
 
 ### Pipeline (single images)
 
